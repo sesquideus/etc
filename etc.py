@@ -43,5 +43,7 @@ class ExposureTimeCalculator():
 
 
 
+# Remove this!
 if __name__ == "__main__":
-    print(ExposureTimeCalculator()(5, 3600))
+    etc = ExposureTimeCalculator(dark=0.5 / u.second, ron=0.3)
+    print(etc(5 * u.mag, 3600 * u.second))
